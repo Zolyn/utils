@@ -36,6 +36,7 @@
     "lint": "eslint \"./src/**/*.ts\"",
     "lint:fix": "nr lint --fix",
     "prepare": "husky install",
+    "prepublishOnly": "nr build",
     "release": "nr ensure && bumpp --commit --tag --push"
   },
   "config": {
