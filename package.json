@@ -35,7 +35,8 @@
     "ensure": "git-ensure --no-behind -c",
     "lint": "eslint \"./src/**/*.ts\"",
     "lint:fix": "nr lint --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "nr ensure && bumpp --commit --tag --push"
   },
   "config": {
     "commitizen": {
@@ -49,7 +50,6 @@
     "@zolyn/cz-conventional-changelog": "^1.0.1",
     "@zolyn/eslint-config": "^1.0.3",
     "bumpp": "^8.2.1",
-    "changelogen": "^0.1.1",
     "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "eslint": "^8.18.0",
