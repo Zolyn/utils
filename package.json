@@ -30,6 +30,7 @@
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production tsup",
+    "changelog": "changelogithub -o CHANGELOG.md --contributors false --emoji false",
     "commit": "cz",
     "dev": "cross-env NODE_ENV=development tsup",
     "ensure": "git-ensure --no-behind -c",
@@ -48,6 +49,7 @@
     "@antfu/ni": "^0.16.2",
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
+    "@zolyn/changelogithub": "^0.8.0",
     "@zolyn/cz-conventional-changelog": "^1.0.1",
     "@zolyn/eslint-config": "^1.0.3",
     "bumpp": "^8.2.1",
