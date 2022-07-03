@@ -30,7 +30,7 @@
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production tsup",
-    "changelog": "changelogithub -o CHANGELOG.md --contributors false --emoji false",
+    "changelog": "changelogithub -o CHANGELOG.md --contributors false --emoji false && git add CHANGELOG.md",
     "commit": "cz",
     "dev": "cross-env NODE_ENV=development tsup",
     "ensure": "git-ensure --no-behind -c",
@@ -38,7 +38,7 @@
     "lint:fix": "nr lint --fix",
     "prepare": "husky install",
     "prepublishOnly": "nr build",
-    "release": "nr ensure && bumpp --commit --tag --push"
+    "release": "nr ensure && nr changelog && bumpp --commit --tag --push"
   },
   "config": {
     "commitizen": {
