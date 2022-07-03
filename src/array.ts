@@ -15,7 +15,3 @@ export function partition<T>(arr: T[], filter: ArrayFilter<T>): [T[], T[]] {
 
     return [positive, negative];
 }
-
-export function excludeNullable<T>(arr: T[]): NonNullable<T>[] {
-    return arr.filter(Boolean) as NonNullable<T>[];
-}
