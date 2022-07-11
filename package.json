@@ -38,7 +38,8 @@
     "lint:fix": "nr lint --fix",
     "prepare": "husky install",
     "prepublishOnly": "nr build",
-    "release": "nr ensure && nr changelog && bumpp --commit --tag --push"
+    "release": "nr ensure && nr changelog && bumpp --commit --tag --push",
+    "typecheck": "tsc --noEmit"
   },
   "config": {
     "commitizen": {
